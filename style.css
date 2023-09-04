@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+
+    background: linear-gradient(35deg,black,rgb(45, 18, 18),rgb(40, 39, 39));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+
+}
+
+/* i want main and footer in same screen */
+body .main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper{
+    background: #ffffff84;
+    padding: 25px;
+    border-radius: 15px;
+    height: 260px;
+    box-shadow: 4px 3px 10px rgb(0, 0, 0);
+}
+
+.wrapper.active{
+    height: 530px;
+}
+
+
+.wrapper .head{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapper .head h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.wrapper .head p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
+.wrapper .form{
+    margin: 20px 0 25px;
+
+}
+
+
+
+.wrapper .form input{
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+.wrapper .form input::placeholder{
+    color: #000;
+}
+
+.wrapper .form button{
+    margin: 10px auto;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.wrapper .form button:hover{
+    background: #fff;
+    color: #000;
+}
+
+.wrapper .qr-code{
+    text-align: center;
+    border: 1px solid #000;
+    padding: 33px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 30px;
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: aqua;
+    text-decoration: none;
+}
+
+footer .bi{
+    font-size: 20px;
+    margin-right: 10px;
+    color: aqua;
+}
+
+footer .bi:hover{
+    color: #fff;
+}
+
+footer a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+@media screen and (max-width:500px) {
+    .wrapper{
+        width: 90%;
+    }
+    .wrapper .head h1{
+        font-size: 30px;
+    }
+
+    
+
+
+    .wrapper .head p{
+        font-size: 15px;
+    }
+
+
+
+    .wrapper .form input{
+        font-size: 15px;
+    }
+    
+
+    .wrapper .form button{
+        font-size: 15px;
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    footer p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .wrapper .head h1{
+        font-size: 20px;
+    }
+
+    .wrapper .head p{
+        font-size: 13px;
+    }
+
+    .wrapper .form input{
+        font-size: 13px;
+    }
+
+    .wrapper .form button{
+        font-size: 13px;
+    }
+
+    footer p{
+        font-size: 13px;
+    }
+     
+}
